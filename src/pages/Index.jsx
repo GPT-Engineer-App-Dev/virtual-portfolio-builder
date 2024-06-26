@@ -1,17 +1,21 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Heading, Button, Box, Image, HStack, IconButton } from "@chakra-ui/react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+      <VStack spacing={6}>
+        <Box boxSize="150px">
+          <Image src="/profile.jpg" alt="Profile Picture" borderRadius="full" />
+        </Box>
+        <Heading as="h1" size="2xl">John Doe</Heading>
+        <Text fontSize="lg" textAlign="center">Full Stack Developer | Tech Enthusiast | Open Source Contributor</Text>
+        <HStack spacing={4}>
+          <IconButton aria-label="GitHub" icon={<FaGithub />} size="lg" as="a" href="https://github.com/johndoe" target="_blank" />
+          <IconButton aria-label="LinkedIn" icon={<FaLinkedin />} size="lg" as="a" href="https://linkedin.com/in/johndoe" target="_blank" />
+          <IconButton aria-label="Twitter" icon={<FaTwitter />} size="lg" as="a" href="https://twitter.com/johndoe" target="_blank" />
+        </HStack>
+        <Button colorScheme="teal" size="lg" as="a" href="#contact">Contact Me</Button>
       </VStack>
     </Container>
   );
