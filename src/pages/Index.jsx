@@ -6,7 +6,7 @@ const Index = () => {
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <VStack spacing={6}>
         <Box boxSize="150px">
-          <Image src="/profile.jpg" alt="Profile Picture" borderRadius="full" />
+          <Image src="/profile.jpg" alt="Profile Picture" borderRadius="full" boxSize="150px" />
         </Box>
         <Heading as="h1" size="2xl">John Doe</Heading>
         <Text fontSize="lg" textAlign="center">Full Stack Developer | Tech Enthusiast | Open Source Contributor</Text>
